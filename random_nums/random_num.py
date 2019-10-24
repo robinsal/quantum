@@ -1,5 +1,3 @@
-import projectq.setups.ibm
-from projectq.backends import IBMBackend
 from projectq import MainEngine
 from projectq.ops import H, Measure
 
@@ -26,6 +24,3 @@ def generate_random(engine):
 eng = MainEngine()
 print(generate_random(eng))
 eng.flush()
-
-# Now we will run it with a quantum computer backend. This number should in
-# theory be truly random
