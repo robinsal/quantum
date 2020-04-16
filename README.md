@@ -20,10 +20,10 @@ It works like so:
   Convert that string to an integer and divide by the maximum possibility ('11111...111').
   
 The results:
-  This will produce an integer from [0, 2^20] with each possiblity equally likely. It then divides it by 2^20 resulting in
-  a float in [0, 1]. However, it is a discrete set of floats. For a bit string of length n, the generated number is of the
+  This will produce an integer from [0, 2^20 - 1] with each possiblity equally likely. It then divides it by 2^20 - 1 resulting 
+  in a float in [0, 1]. However, it is a discrete set of floats. For a bit string of length n, the generated number is of the
   set: [0, 1/(2^n - 1), 2/(2^n - 1), ... , (2^n - 2)/(2^n - 1), 1]. So therefore, since this generates 20 qubits to create the
   bit string the total number of possible outcomes is actually 1,048,576 or 2^20.
   
-There very well may be better algorithms to generate random numbers with quantum computers, but this is the solution I came
-up with.
+There very well may be better algorithms to generate random numbers with quantum computers, but as far as I can tell, this is
+a working solution.
